@@ -1,0 +1,20 @@
+    version: '3'
+    services:
+      frontend:
+        build:
+          context: frontend
+          dockerfile: Dockerfile.local
+        volumes:
+          - ./frontend:/code
+          - /code/node_modules
+        ports:
+          - 3000:3000
+      backend:
+        build:
+          context: backend
+          dockerfile: Dockerfile.local
+        volumes:
+          - ./backend:/code
+          - /code/node_modules
+        ports:
+          - 5000:5000
