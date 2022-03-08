@@ -21,11 +21,17 @@ N - Node.js (JavaScript Runtime)
 ## Clone Repo
 `git clone git@github.com:VideoGameRoulette/Fundky-Fullstack.git`
 
+## Initiallize Submodules
+`git submodule init`
+
+## Update Submodules
+`git submodule update`
+
 # Start With Docker
 `docker-compose up --build --remove-orphans`
 
 # Install Nodemon (For Development Mode)
-`docker-compose exec frontend yarn add nodemon`
+`docker-compose exec backend yarn add nodemon`
 
 # Start Without Docker
 
@@ -40,5 +46,6 @@ N - Node.js (JavaScript Runtime)
 `node index` or `nodemon index`
 
 ## Client Browser URL
-[http://localhost:3000](http://localhost:3000)
+[Frontend URL](http://localhost:3000)
+[Backend URL](http://localhost:5000)
 
