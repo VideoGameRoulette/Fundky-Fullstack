@@ -19,6 +19,13 @@ const ListDonations = ({ clientid }) => {
 
     useEffect(() => { console.log("Donations Fetched! - ", donations); }, [donations]);
 
+    const getStream = (donation) => {
+        if (donation.stream !== undefined) {
+            var options = `Poll - ${donation.stream.poll.option.description.description}`;
+            return <td>{options}</td>
+        }
+        return <td></td>
+    };
 
     const renderPage = () => {
         if (!isLoaded) {
@@ -37,6 +44,8 @@ const ListDonations = ({ clientid }) => {
                             <th>ID</th>
                             <th>NAME</th>
                             <th>AMOUNT</th>
+                            <th>COMMENT</th>
+                            <th>OPTION</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,6 +54,8 @@ const ListDonations = ({ clientid }) => {
                                 <td>{donation.id}</td>
                                 <td>{donation.displayName}</td>
                                 <td>${donation.amount}</td>
+                                <td>{donation.message ?? donation.message}</td>
+                                {getStream(donation)}
                             </tr>
                         ))}
                     </tbody>
