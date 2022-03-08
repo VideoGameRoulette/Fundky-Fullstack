@@ -22,10 +22,7 @@ N - Node.js (JavaScript Runtime)
 `git clone git@github.com:VideoGameRoulette/Fundky-Fullstack.git`
 
 ## Initiallize Submodules
-`git submodule init`
-
-## Update Submodules
-`git submodule update`
+`git submodule update --init --recursive`
 
 # Start With Docker
 `docker-compose up --build --remove-orphans`
