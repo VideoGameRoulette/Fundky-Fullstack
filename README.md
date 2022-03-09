@@ -5,7 +5,7 @@ Fullstack Environment Example for Fundky
 ![react](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/React.png)
 ![node](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Node.png)
 ![nodemon](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Nodemon.png)
-![bootstrap](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Bootstrap.png)
+![tailwindcss](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Tailwind.png)
 ![docker](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Docker.png)
 
 ## What is ERN Stack?
