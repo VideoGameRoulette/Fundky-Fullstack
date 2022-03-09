@@ -6,7 +6,7 @@ const ListMilestones = ({ clientid = '0' }) => {
 
     const getMilestones = async () => {
         try {
-            const { milestones } = await fetch("http://localhost:5000/milestones/" + clientid)
+            const { milestones } = await fetch("/api/milestones/" + clientid)
                 .then((response) => response.json());
             setData(milestones);
             setLoaded(true);

@@ -6,7 +6,7 @@ const DonationTotal = ({ clientid = '0' }) => {
 
     const getDonations = async () => {
         try {
-            const data = await fetch('http://localhost:5000' + '/donations/total/' + clientid)
+            const data = await fetch('/api/donations/total/' + clientid)
                 .then((response) => response.json());
             setData(data.current);
             setLoaded(true);

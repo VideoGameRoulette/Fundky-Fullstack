@@ -1,20 +1,22 @@
-    version: '3'
-    services:
-      frontend:
-        build:
-          context: frontend
-          dockerfile: Dockerfile.local
-        volumes:
-          - ./frontend:/code
-          - /code/node_modules
-        ports:
-          - 3000:3000
-      backend:
-        build:
-          context: backend
-          dockerfile: Dockerfile.local
-        volumes:
-          - ./backend:/code
-          - /code/node_modules
-        ports:
-          - 5000:5000
+version: '3'
+services:
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile.local
+    volumes:
+      - ./frontend:/code
+      - /code/node_modules
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile.local
+    volumes:
+      - ./backend:/code
+      - /code/node_modules
+  reverse-proxy:
+    image: caddy:2.0.0
+    ports:
+      - 3000:3000
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile

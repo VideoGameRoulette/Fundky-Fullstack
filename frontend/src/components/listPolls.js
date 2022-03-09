@@ -6,7 +6,7 @@ const ListPolls = ({ clientid = '0' }) => {
 
     const getPolls = async () => {
         try {
-            const { polls } = await fetch("http://localhost:5000/polls/" + clientid)
+            const { polls } = await fetch("/api/polls/" + clientid)
                 .then((response) => response.json());
             setData(polls);
             setLoaded(true);
