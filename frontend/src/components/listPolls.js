@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
-const ListPolls = ({ clientid }) => {
+const ListPolls = ({ clientid = '0' }) => {
     const [polls, setData] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
 
@@ -30,21 +30,21 @@ const ListPolls = ({ clientid }) => {
         }
         return (
             <Fragment key="polls">
-                <h1 className="text-center mt-5">Poll List</h1>
-                <table className="table mt-5 text-center">
+                <h1 className="text-center border border-indigo-500 bg-indigo-900 text-white">Poll List</h1>
+                <table className="m-auto w-full">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>DESCRIPTION</th>
-                            <th>STATUS</th>
+                            <th className="border border-indigo-300 bg-indigo-700 text-white">ID</th>
+                            <th className="border border-indigo-300 bg-indigo-700 text-white">DESCRIPTION</th>
+                            <th className="border border-indigo-300 bg-indigo-700 text-white">STATUS</th>
                         </tr>
                     </thead>
                     <tbody>
                         {polls.map((poll, idx) => (
                             <tr key={idx}>
-                                <td>{poll.id}</td>
-                                <td>{poll.description.title}</td>
-                                <td>{poll.status}</td>
+                                <td className="text-center border border-indigo-300 bg-indigo-500 text-white">{poll.id}</td>
+                                <td className="text-center border border-indigo-300 bg-indigo-500 text-white">{poll.description.title}</td>
+                                <td className="text-center border border-indigo-300 bg-indigo-500 text-white">{poll.status}</td>
                             </tr>
                         ))}
                     </tbody>

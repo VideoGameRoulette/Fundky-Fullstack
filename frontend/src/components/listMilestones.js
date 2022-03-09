@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
-const ListMilestones = ({ clientid }) => {
+const ListMilestones = ({ clientid = '0' }) => {
     const [milestones, setData] = useState([]);
     const [isLoaded, setLoaded] = useState(false);
 
@@ -30,21 +30,21 @@ const ListMilestones = ({ clientid }) => {
         }
         return (
             <Fragment key="milestones">
-                <h1 className="text-center mt-5">Milestones List</h1>
-                <table className="table mt-5 text-center">
+                <h1 className="text-center border border-indigo-500 bg-indigo-900 text-white mt-5">Milestones List</h1>
+                <table className="m-auto w-full">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>DESCRIPTION</th>
-                            <th>GOAL</th>
+                            <th className="border border-indigo-300 bg-indigo-700 text-white">ID</th>
+                            <th className="border border-indigo-300 bg-indigo-700 text-white">DESCRIPTION</th>
+                            <th className="border border-indigo-300 bg-indigo-700 text-white">GOAL</th>
                         </tr>
                     </thead>
                     <tbody>
                         {milestones.map((milestone, idx) => (
                             <tr key={idx}>
-                                <td>{milestone.id}</td>
-                                <td>{milestone.description.description}</td>
-                                <td>{milestone.goal}</td>
+                                <td className="text-center border border-indigo-300 bg-indigo-500 text-white">{milestone.id}</td>
+                                <td className="text-center border border-indigo-300 bg-indigo-500 text-white">{milestone.description.description}</td>
+                                <td className="text-center border border-indigo-300 bg-indigo-500 text-white">{milestone.goal}</td>
                             </tr>
                         ))}
                     </tbody>

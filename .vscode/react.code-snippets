@@ -1,0 +1,74 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	"ReactPage": {
+	  "scope": "javascript,typescript",
+	  "prefix": "np",
+	  "body": [
+		"import React, { Fragment, useState, useEffect } from 'react';\n",
+		"const ${1:nameMe} = () => {",
+		"\tconst [${2:data}, ${3:setData}] = useState(${4:''});\n",
+		"\tuseEffect(() => {\n",
+		"\t},[]);\n",
+		"\treturn (",
+		"\t\t<Fragment key='${5:keyName}'>",
+		"\t\t\t<div></div>",
+		"\t\t</Fragment>",
+		"\t);",
+		"};\n",
+		"export default ${1:nameMe};"
+	  ],
+	  "description": "React Page Template"
+	},
+	"ReactGetAxios": {
+	  "scope": "javascript,typescript",
+	  "prefix": "npa-get",
+	  "body": [
+		"import React, { Fragment, useState, useEffect } from 'react';",
+		"import axios from 'axios';\n",
+		"const ${1:nameMe} = () => {",
+		"\tconst [${2:data}, ${3:setData}] = useState(${4:{}});\n",
+		"\tuseEffect(async () => {",
+		"\t\tconst { json } = await axios.get('http://localhost:5000/');",
+		"\t\tsetData(json);",
+		"\t\tsetLoaded(true);",
+		"\t},[]);\n",
+		"\tconst renderContent = () => {",
+		"\t\tif (!isLoaded) return <></>;",
+		"\t\telse return <div></div>;",
+		"\t};\n",
+		"\treturn <Fragment>{renderContent()}</Fragment>;\n",
+		"};\n",
+		"export default ${1:nameMe};"
+	  ],
+	  "description": "React Template With Axios Get Function"
+	},
+	"ReactGetFetch": {
+	  "scope": "javascript,typescript",
+	  "prefix": "npf-get",
+	  "body": [
+		"import React, { Fragment, useState, useEffect } from 'react';\n",
+		"const ${1:nameMe} = () => {",
+		"\tconst [${2:data}, ${3:setData}] = useState(${4:''});\n",
+		"\tuseEffect(async () => {",
+		"\t\tconst json = await fetch('http://localhost:5000/').then((response) => response.json());",
+		"\t\tsetData(json);",
+		"\t\tsetLoaded(true);",
+		"\t},[]);\n",
+		"\treturn (",
+		"\t\t<Fragment key='${5:keyName}'>",
+		"\t\t\t<div></div>",
+		"\t\t</Fragment>",
+		"\t);",
+		"};\n",
+		"export default ${1:nameMe};"
+	  ],
+	  "description": "React Template With Fetch Get Function"
+	}
+  }
+  

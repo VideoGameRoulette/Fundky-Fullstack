@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
-const DonationTotal = ({ clientid }) => {
+const DonationTotal = ({ clientid = '0' }) => {
     const [donations, setData] = useState(0);
     const [isLoaded, setLoaded] = useState(false);
 
@@ -30,7 +30,7 @@ const DonationTotal = ({ clientid }) => {
         }
         return (
             <Fragment key="total">
-                <h1 className="text-center mt-5">Donations Total: ${donations}</h1>
+                <h1 className="text-center border border-indigo-500 bg-indigo-900 text-white mt-5">Donations Total: ${donations}</h1>
             </Fragment>
         );
     };
