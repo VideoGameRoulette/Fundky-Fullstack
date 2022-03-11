@@ -7,6 +7,7 @@ Fullstack Environment Example for Fundky
 ![nodemon](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Nodemon.png)
 ![tailwindcss](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Tailwind.png)
 ![docker](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Docker.png)
+![caddy](https://raw.githubusercontent.com/VideoGameRoulette/PERN/main/readme/Caddy.png)
 
 ## What is ERN Stack?
 
@@ -45,5 +46,5 @@ N - Node.js (JavaScript Runtime)
 ## Client Browser URL
 [Frontend URL](http://localhost:3000)
 
-[Backend URL](http://localhost:5000)
+[Backend URL](http://localhost:3000/api/)
 
