@@ -3,11 +3,12 @@ import HeaderLogo from "./headerLogo";
 
 const Header = () => {
   const [id, setID] = useState("0");
-  const [bg, setBG] = useState("0");
+  //const [bg, setBG] = useState("0");
+  //const [frame, setFrame] = useState("0");
 
   function sendID() {
     if (id === "0") return;
-    window.location = `/?id=${id}&bg=${bg}`;
+    window.location = `/?id=${id}`;
   }
 
   return (
@@ -23,12 +24,18 @@ const Header = () => {
             placeholder="Campaign ID"
             onChange={(e) => setID(e.target.value)}
           />
-          <input
+          {/* <input
             className="h-8 bg-indigo-500 rounded border border-indigo-300 text-white pl-2 mr-2"
             type="text"
             placeholder="Background Poll ID"
             onChange={(e) => setBG(e.target.value)}
           />
+          <input
+            className="h-8 bg-indigo-500 rounded border border-indigo-300 text-white pl-2 mr-2"
+            type="text"
+            placeholder="Frame Poll ID"
+            onChange={(e) => setFrame(e.target.value)}
+          /> */}
           <button
             className="rounded border border-indigo-300 bg-sky-500 p-1 mr-2"
             onClick={() => sendID()}
