@@ -15,7 +15,7 @@ const Header = () => {
     <Fragment key="header">
       <div className="container h-16 bg-indigo-900 m-auto mb-8 flex items-center">
         <div className="flex justify-start w-6/12 gap-4">
-          <HeaderLogo image="/logo192.png" title="Fundky Assistant" />
+          <HeaderLogo image="/logo192.png" title="Fundky Tools" />
         </div>
         <div className="flex justify-end w-6/12">
           <input
